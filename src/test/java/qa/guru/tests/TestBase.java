@@ -17,8 +17,6 @@ import static qa.guru.helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {
-    static CredentialsConfig credentialsConfig = ConfigFactory.create(CredentialsConfig.class);
-
     @BeforeAll
     public static void setup() {
         Configuration.browser = BrowserstackMobileDriver.class.getName();
