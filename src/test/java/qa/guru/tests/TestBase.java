@@ -2,19 +2,17 @@ package qa.guru.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.aeonbits.owner.ConfigFactory;
-import qa.guru.config.CredentialsConfig;
-import qa.guru.drivers.BrowserstackMobileDriver;
-import qa.guru.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import qa.guru.drivers.BrowserstackMobileDriver;
+import qa.guru.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static qa.guru.helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
+import static qa.guru.helpers.Attach.sessionId;
 
 public class TestBase {
     @BeforeAll
