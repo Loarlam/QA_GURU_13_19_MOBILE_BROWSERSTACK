@@ -24,7 +24,6 @@ public class TestBase {
     @BeforeEach
     public void startDriver() {
         addListener("AllureSelenide", new AllureSelenide());
-
         open();
     }
 
@@ -33,7 +32,7 @@ public class TestBase {
         String sessionId = sessionId();
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-        step("Close driver", Selenide::closeWebDriver);
         Attach.video(sessionId);
+        step("Close driver", Selenide::closeWebDriver);
     }
 }
